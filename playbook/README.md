@@ -13,12 +13,8 @@ ansible-vault view <filename>
 6. Как выглядит команда запуска `playbook`, если переменные зашифрованы?
 ansible-playbook site.yml --ask-vault-pass
 7. Как называется модуль подключения к host на windows?
-Папка inventory/prod.yml
-hosts: 
-  Windows: 
-  ansible_connection: ssh
+ansible.builtin.winrm
 8. Приведите полный текст команды для поиска информации в документации ansible для модуля подключений ssh
-ansible-doc packet_sshkey
+ansible-doc ansible.builtin.ssh
 9. Какой параметр из модуля подключения `ssh` необходим для того, чтобы определить пользователя, под которым необходимо совершать подключение?
-/etc/ansible/ansible.cfg
-remote_user = root
+remote_user
